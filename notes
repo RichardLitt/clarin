@@ -1,0 +1,69 @@
+CQP
+# Possible Done?
+
+# = Done
+#take arrows out - done
+#Make runable entirely using arguments
+
+#sense1:h1:miner|sense1:h2:laborer|...
+#sense2:h1:bla|sense2:h2:blubb
+
+#Make an XML output, too
+
+#sense1:h1:miner|sense1:h2:laborer|
+#[21/05/2012 14:16:36] hk_uni: sense2:h1:bla|sense2:h2:blubb
+
+======
+
+To a certain level
+Throw everything in a pipe (ignore numbering of senses
+
+# Possibilities:
+</hypen>  	Hypernyms
+	<hypon, -treen	Hyponyms & Hyponym Tree
+	<synsn		Synonyms (ordered by estimated frequency)
+	<smemn		Member of Holonyms
+	<subsn		Has Substance Meronyms
+	<partn		Has Part Meronyms
+	<meron		All Meronyms
+	<holon		All Holonyms
+	<derin		Derived Forms
+	<famln		Familiarity & Polysemy Count
+	<coorn		Coordinate Terms (sisters)
+	<hmern		Hierarchical Meronyms
+Information available for verb tree
+	<grepn		List of Compound Words
+	<over		Overview of Senses
+</noun>
+
+
+<verb>
+	<hypev		Hypernyms
+	<synsv		Synonyms (ordered by estimated frequency)
+	<deriv		Derived Forms
+	<famlv		Familiarity & Polysemy Count
+	<framv		Verb Frames
+	<coorv		Coordinate Terms (sisters)
+	<simsv		Synonyms (grouped by similarity of meaning)
+	<grepv		List of Compound Words
+	<over		Overview of Senses
+</verb>
+
+<adj>
+	<antsa		Antonyms
+	<synsa		Synonyms (ordered by estimated frequency)
+	<deria		Derived Forms
+	<domna		Domain
+	<famla		Familiarity & Polysemy Count
+	<grepa		List of Compound Words
+	<over		Overview of Senses
+</adj>
+
+<adv>
+	<synsr		Synonyms (ordered by estimated frequency)
+	<pertr		Pertainyms
+	<famlr		Familiarity & Polysemy Count
+	<grepr		List of Compound Words
+	<over		Overview of Senses
+</adv>
+
