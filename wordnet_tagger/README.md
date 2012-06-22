@@ -1,4 +1,4 @@
-## WordNet CQP and XML Tagger
+# WordNet CQP and XML Tagger
 ==============================
 
 This was developed by Richard Littauer as part of the CLARIN-D project,
@@ -20,8 +20,10 @@ own corpora, in any format.
 ------------
 
 To a certain extent, this can be run straight from the command line.
-Example inputs: `python wn_tagger.py xml curdie english noun
-'hypen, hypon'`, `python wn_tagger.py cqp curdie`
+Example inputs: 
+
+  * `python wn_tagger.py xml curdie english noun 'hypen, hypon'`, 
+  * `python wn_tagger.py cqp curdie`
 
 Necessary arguments:
   * `python wn_tagger.py` : run the file
