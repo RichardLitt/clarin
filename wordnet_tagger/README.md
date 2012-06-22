@@ -1,4 +1,4 @@
-# WordNet CQP and XML Tagger
+WordNet CQP and XML Tagger
 ==============================
 
 This was developed by Richard Littauer as part of the CLARIN-D project,
@@ -16,30 +16,37 @@ This code is dependant upon:
 Clone this repository, or simply download `wn_tagger.py` and use your
 own corpora, in any format.
 
+If you would like to use the tagger universally, set up a symbolic link:
+
+  * `$ ln -s /your/desired/directory/path/wn_tagger.py /usr/bin/wn_tagger`
+  * `$ chmod 755 a+x /your/desired/directory/path/wn_tagger.py`
+
+In such cases, the full file path must be specified for the input file.
+
 # How to run
 ------------
 
 To a certain extent, this can be run straight from the command line.
 Example inputs: 
 
-  * `python wn_tagger.py xml curdie english noun 'hypen, hypon'`, 
+  * `python wn_tagger.py xml curdie english noun 'hypen, hypon'`
   * `python wn_tagger.py cqp curdie`
 
 Necessary arguments:
-  * `python wn_tagger.py` : run the file
-  * `xml` or `cqp` : the output file format
-  * `curdie` : example input file (in the same directory, or with full
+  * `python wn_tagger.py` - To run the file. 
+  * `xml` or `cqp` - the output file format
+  * `curdie` - example input file (in the same directory, or with full
     path)
 
 Optional arguments (these will be requested if not given)
-  * `english` or `german` : language for the tagger. German wordnet is
+  * `english` or `german` - language for the tagger. German wordnet is
     not currently supported.
-  * `noun` or `verb` : the part of speech to be tagged.
-  * `hypen, hypon` : The desired wordnet extractions, comma and space delineated.
+  * `noun` or `verb` - the part of speech to be tagged.
+  * `hypen, hypon` - The desired wordnet extractions, comma and space delineated. For a single argument, type simply `hypen`.
 
 Once the script has run, the ouput file should be in file
-__output\_input-file-name\_format__. An example output can be seen in
-the file output\_curdie\_cqp.
+`output\_input-file-name\_format`. An example output can be seen in
+the file `output\_curdie\_cqp`.
 
 # Development
 -------------
