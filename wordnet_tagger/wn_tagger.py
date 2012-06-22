@@ -1,49 +1,17 @@
 '''
-Wordnet XML & CQP tagger
+Wordnet XML & CQP Tagger
 Richard Littauer, CLARIN-D
 
-This depends on: 
-  - having a full wordnet installation (specifically, wn)
-  - currently, using Mac OSX (possible Unix).
-  - having the stuttgard tree-tagger installed.
-
-1 word per line (ignore xml) 
-# Currently, this only works on a previously parsed text
-look up word
-annotate back into the xml
-
-add a new tab at the end of the line ## Why?
-would be a nice tool for weblicht
-demo file
-
-To do:
-  - Make it executable outside of Mac OSX
-  - Make it grab wordnet files externally #Meaning? 
-  - Use an existing XML schema instead of the provisional one provided here
-    #Need to look for this.
-      - Better XML wrapping. # See above.
-  - More options #Working on it.
-
+See installation file for more information.
 '''
 
 # Fedex some packages in
-import subprocess, sys	
-import nltk, re
-import types
-
-# The test file should be 'curdie'
-
-file = open(sys.argv[2])
-file = file.read()
-
-output_file = '/Users/richardlittauer/Github/clarin/output_' + sys.argv[2] + \
-        '_' + sys.argv[1]
-
+import subprocess, sys, re, types	
 
 # This gets tokenizers with the Stuttgart tree-tagger. 
 def tree_tagger_text(input_file, language):
     tree_tagger = 'tree-tagger-' + language
-    cmd = [ tree_tagger, sys.argv[2] ]
+    cmd = [ tree_tagger, input_file ]
     output = subprocess.Popen( cmd, stdout=subprocess.PIPE ).communicate()[0]
     return output
 
@@ -172,6 +140,7 @@ def tt_lookup(tokenised_string):
 
 # Presenting what the choices are, in case you want to choose
 def tag_options(optioned_text):
+    global pos
     options = {}
 
     # From those available in the text. 
@@ -190,14 +159,14 @@ def tag_options(optioned_text):
     print 'Options for which part of speech?'
     print 'noun | verb | adj | adv '
     opts = ['noun', 'verb', 'adj', 'adv']
-    try:
-        if sys.argv[5] in opts: pos = sys.argv[5]
-        print 'Option chosen: ' + pos
-    except:
-        pos = ''
-        while pos not in opts:
-            pos = raw_input('verify: ')
-        print 'Option chosen: ' + pos
+    #try:
+    #    if pos_choice in opts: pos = pos_choice
+    #    print 'Option chosen: ' + pos
+
+    while pos not in opts:
+        pos = raw_input('verify: ')
+
+    print 'Option chosen: ' + pos
     possible_choices = []
     #try:
     print
@@ -258,7 +227,7 @@ def tagger(optioned_text, pos, option_choice):
     f = open(output_file,'w+')
 
     from datetime import datetime
-    f.write('## XML Tagged from the Wordnet Parser on %s.\n' % str(datetime.now()))
+    f.write('## CQP Tagged from the Wordnet Parser on %s.\n' % str(datetime.now()))
 
     for x in optioned_text:
         written = False
@@ -280,28 +249,26 @@ def tagger(optioned_text, pos, option_choice):
                         f.write('<' + results[key] + '>\n')
                     if sys.argv[1] == 'cqp':
                         print results[key]
-                        f.write(results[key] + '\n')
+                        f.write('<'+key+' sense="'+results[key] + '">\n')
                 if isinstance(results[key], types.ListType):
                     if sys.argv[1] == 'xml':
                         for sense in results[key]:
                             print '<' + sense + '>'
                             f.write('<' + sense + '>\n')
                     if sys.argv[1] == 'cqp':
-                        for sense in results[key]:
-                            print sense
-                            f.write(sense + '\n')
+                        print '<' + key
+                        f.write('<'+key)
+                        for sense in range(len(results[key])):
+                            print results[key][sense]
+                            f.write(' sense'+str(sense+1)+'="|' + results[key][sense] + '|"')
+                        print '>\n'
+                        f.write('>\n')
             if written:
                 print '\t'.join(x[0]) 
                 f.write('\t'.join(x[0]) + '\n')
-                if sys.argv[1] == 'xml':
-                    for key in sorted(results.iterkeys(), reverse=True):
-                        if isinstance(results[key], types.StringTypes): 
-                            print '</' + key + '>'
-                            f.write('</' + key + '>\n')
-                        if isinstance(results[key], types.ListType):
-                            for sense in results[key]:
-                                print '</' + key + '>'
-                                f.write('</' + key + '>\n')
+                for key in sorted(results.iterkeys(), reverse=True):
+                    print '</' + key + '>'
+                    f.write('</' + key + '>\n')
 
             if not written:
                 print '\t'.join(x[0])
@@ -351,7 +318,8 @@ def hypon(rawtext):
 
         if sys.argv[1] == 'cqp':
             for item in range(len(block)):
-                block[item] = 'sense' + str(index) + ':' + option + str(item) + ':' + block[item]
+                block[item] = 'sense' + str(index) + ':' + \
+                        option + str(item) + ':' + block[item]
 
             #mung it all together
             results = '|'.join(block)
@@ -395,7 +363,8 @@ def hypev(rawtext):
 
         if sys.argv[1] == 'cqp':
             for item in range(len(block)):
-                block[item] = 'sense' + str(index) + ':' + option + str(item) + ':' + block[item]
+                block[item] = 'sense' + str(index) + ':' + \
+                        option + str(item) + ':' + block[item]
 
             #mung it all together
             results = '|'.join(block)
@@ -438,7 +407,8 @@ def hypen(rawtext):
 
         if sys.argv[1] == 'cqp':
             for item in range(len(block)):
-                block[item] = 'sense' + str(index) + ':' + option + str(item) + ':' + block[item]
+                block[item] = 'sense' + str(index) + ':' + \
+                        option + str(item) + ':' + block[item]
             #mung it all together
             results = '|'.join(block)
             final_string.append(results)
@@ -496,7 +466,8 @@ def treen(rawtext):
 
         if sys.argv[1] == 'cqp':
             for item in range(len(block)):
-                block[item] = 'sense' + str(index) + ':' + option + str(item) + ':' + block[item]
+                block[item] = 'sense' + str(index) + ':' + \
+                        option + str(item) + ':' + block[item]
 
             #mung it all together
             results = '|'.join(block)
@@ -535,7 +506,9 @@ def synsn(rawtext):
 
         if sys.argv[1] == 'cqp':
             for item in range(len(block)):
-                block[item] = 'sense' + str(index) + ':' + option + str(item) + ':' + block[item]
+                block[item] = 'sense' + str(index) + ':' + \
+                        option + str(item) + ':' + block[item]
+
             #mung it all together
             results = '|'.join(block)
             final_string.append(results)
@@ -573,7 +546,9 @@ def synsv(rawtext):
 
         if sys.argv[1] == 'cqp':
             for item in range(len(block)):
-                block[item] = 'sense' + str(index) + ':' + option + str(item) + ':' + block[item]
+                block[item] = 'sense' + str(index) + ':' + \
+                        option + str(item) + ':' + block[item]
+                
             #mung it all together
             results = '|'.join(block)
             final_string.append(results)
@@ -612,7 +587,9 @@ def simsv(rawtext):
 
         if sys.argv[1] == 'cqp':
             for item in range(len(block)):
-                block[item] = 'sense' + str(index) + ':' + option + str(item) + ':' + block[item]
+                block[item] = 'sense' + str(index) + ':' + \
+                        option + str(item) + ':' + block[item]
+                
             #mung it all together
             results = '|'.join(block)
             final_string.append(results)
@@ -623,9 +600,19 @@ def simsv(rawtext):
 # This is where things begin to happen. 
 if __name__ == "__main__":
 
+    # The test file should be 'curdie'
+    input_file = sys.argv[2]
+
+    file = open(input_file)
+    file = file.read()
+
+    output_file = '/Users/richardlittauer/Github/clarin/output_' + input_file + \
+            '_' + sys.argv[1]
+
+
     '''
     Example argument input:
-        python wnxml.py xml curdie tt english noun 'hypen, hypon'
+        python wn_tagger.py xml curdie tt english noun 'hypen, hypon'
         "      "        format file tagger language pos wn.options
     '''
 
@@ -636,29 +623,50 @@ if __name__ == "__main__":
         while sys.argv[1] not in outFormats:
             sys.argv[1] = raw_input('Choose xml or cqp output: ')
 
-        # What sort of tagger do yuo want to use?
-        if sys.argv[3] == 'tt':
-            
-            # What language is the text in?
-            if (sys.argv[4] == 'english'): language = 'english'
-            elif (sys.argv[4] == 'german'): language = 'german'
+        # What sort of tagger do you want to use?
+        ## Tree tagger currently the only option.
+        #if sys.argv[3] == 'tt':
+
+        # What language is the text in?
+        try:
+            if (sys.argv[3] == 'english'): language = 'english'
+            elif (sys.argv[3] == 'german'): language = 'german'
             else:
                 language = raw_input('english or deutsch? e/g ')
                 if language == 'e': language = 'english'
                 if language == 'g': language = 'german'
+        except:
+            language = raw_input('english or deutsch? e/g ')
+            if language == 'e': language = 'english'
+            if language == 'g': language = 'german'
 
-            # Are we tagging a document we've already tagged?
-            if sys.argv[2] == 'output_file':
-                optioned_text, pos, choice = \
-                tag_options(tt_lookup(file))
-                tagger(optioned_text, pos, choice)
+        # What is the part of speech?
+        try:
+            pos = sys.argv[4]
+        except:
+            print 'part of speech options: noun / verb'
+            pos = raw_input('pos: n/v ')
+            if pos == 'n': pos = 'noun'
+            if pos == 'v': pos = 'verb'
 
-            # Or not?
-            else:
-                optioned_text, pos, choice = \
-                tag_options(tt_lookup(tree_tagger_text(file, language)))
-                tagger(optioned_text, pos, choice)
+        '''
+        # Are we tagging a document we've already tagged?
+        ## Not quite fully functional at the moment.
+        ## Which means, in effect, you can only tag a document for one part
+        ## of speech
+        if sys.argv[6][:5] == 'output':
+            optioned_text, pos, choice = \
+            tag_options(tt_lookup(file))
+            tagger(optioned_text, pos, choice)
+        '''
 
+        # Or not?
+        #else:
+        optioned_text, pos, choice = \
+        tag_options(tt_lookup(tree_tagger_text(input_file, language)))
+        tagger(optioned_text, pos, choice)
+
+        '''
         # Not currently functional/tested
         if sys.argv[3] == 'nltk':
             # Let's tokenise the file so we can deal with each word. 
@@ -666,6 +674,7 @@ if __name__ == "__main__":
             text = nltk.Text(tokens)
             word = pos_retain(pos_split(wn_cmd(item)))
             lookup(word)
+        '''
 
     except: 
         print 'Wrong parameters. Consult developer.'

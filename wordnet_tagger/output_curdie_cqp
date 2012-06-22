@@ -1,0 +1,45 @@
+## CQP Tagged from the Wordnet Parser on 2012-06-20 15:31:04.592354.
+Curdie	NP	<unknown>
+<hypev sense1="|sense1:hypev0:be|" sense2="|sense1:hypev0:be|" sense3="|sense1:hypev0:be|" sense4="|sense4:hypev0:exist, be|" sense5="|sense1:hypev0:be|" sense6="|sense6:hypev0:equal, be|" sense7="|sense7:hypev0:constitute, represent, make up, comprise, be|" sense8="|sense8:hypev0:be, follow|" sense9="|sense9:hypev0:embody, be, personify|sense9:hypev1:typify, symbolize, symbolise, stand for, represent|sense9:hypev2:mean, intend|sense9:hypev3:convey|sense9:hypev4:impart, leave, give, pass on|sense9:hypev5:tell|sense9:hypev6:inform|sense9:hypev7:communicate, intercommunicate|sense9:hypev8:interact|sense9:hypev9:act, move|" sense10="|sense10:hypev0:be|sense10:hypev1:take, occupy, use up|sense10:hypev2:use, expend|" sense11="|sense11:hypev0:be, live|" sense12="|sense12:hypev0:be|sense12:hypev1:stay, remain, rest|sense12:hypev2:be|" sense13="|sense13:hypev0:cost, be|sense13:hypev1:be|">
+was	VBD	be
+</hypev>
+the	DT	the
+son	NN	son
+of	IN	of
+Peter	NP	Peter
+the	DT	the
+miner	NN	miner
+.	SENT	.
+He	PP	he
+<hypev sense1="|sense1:hypev0:populate, dwell, live, inhabit|sense1:hypev1:be|sense1:hypev2:Phrasal Verb-> live in#1; live out#2|" sense2="|sense2:hypev0:live|" sense3="|sense3:hypev0:survive, last, live, live on, go, endure, hold up, hold out|" sense4="|sense4:hypev0:exist, survive, live, subsist|" sense5="|sense5:hypev0:be, live|" sense6="|sense6:hypev0:know, experience, live|sense6:hypev1:experience, see, go through|sense6:hypev2:undergo|sense6:hypev3:change|" sense7="|sense7:hypev0:live|">
+lived	VBD	live
+</hypev>
+with	IN	with
+his	PP$	his
+father	NN	father
+and	CC	and
+mother	NN	mother
+in	IN	in
+a	DT	a
+cottage	NN	cottage
+<hypev sense1="|sense1:hypev0:construct, build, make|sense1:hypev1:make, create|" sense2="|sense2:hypev0:build up, work up, build, progress|sense2:hypev1:develop|sense2:hypev2:grow|sense2:hypev3:increase|sense2:hypev4:change magnitude|sense2:hypev5:change|" sense3="|sense3:hypev0:build, establish|sense3:hypev1:make, create|" sense4="|sense4:hypev0:build|sense4:hypev1:better, improve, amend, ameliorate, meliorate|sense4:hypev2:change, alter, modify|" sense5="|sense5:hypev0:build|sense5:hypev1:oversee, supervise, superintend, manage|sense5:hypev2:administer, administrate|sense5:hypev3:manage, deal, care, handle|sense5:hypev4:control, command|" sense6="|sense6:hypev0:build|sense6:hypev1:develop|sense6:hypev2:create|" sense7="|sense7:hypev0:build|sense7:hypev1:create|sense7:hypev2:act, move|" sense8="|sense8:hypev0:build|sense8:hypev1:establish, base, ground, found|" sense9="|sense9:hypev0:build up, work up, build, ramp up|sense9:hypev1:increase|sense9:hypev2:change, alter, modify|" sense10="|sense10:hypev0:build|sense10:hypev1:intensify, deepen|sense10:hypev2:increase|sense10:hypev3:change magnitude|sense10:hypev4:change|">
+built	VBN	build
+</hypev>
+on	IN	on
+a	DT	a
+mountain	NN	mountain
+,	,	,
+and	CC	and
+he	PP	he
+<hypev sense1="|sense1:hypev0:work|" sense2="|sense2:hypev0:work, do work|" sense3="|sense3:hypev0:work, act|sense3:hypev1:succeed, win, come through, bring home the bacon, deliver the goods|" sense4="|sense4:hypev0:function, work, operate, go, run|" sense5="|sense5:hypev0:work, work on, process|sense5:hypev1:transform, transmute, transubstantiate|sense5:hypev2:change, alter, modify|" sense6="|sense6:hypev0:exercise, work, work out|sense6:hypev1:work, put to work|sense6:hypev2:use, utilize, utilise, apply, employ|" sense7="|sense7:hypev0:make, work|sense7:hypev1:pass, go through, go across|sense7:hypev2:travel, go, move, locomote|" sense8="|sense8:hypev0:work|sense8:hypev1:work|" sense9="|sense9:hypev0:work|sense9:hypev1:go, proceed, move|sense9:hypev2:act, move|" sense10="|sense10:hypev0:work|sense10:hypev1:move, displace|" sense11="|sense11:hypev0:bring, work, play, wreak, make for|sense11:hypev1:make, create|" sense12="|sense12:hypev0:work, put to work|sense12:hypev1:use, utilize, utilise, apply, employ|" sense13="|sense13:hypev0:cultivate, crop, work|sense13:hypev1:fix, prepare, set up, ready, gear up, set|sense13:hypev2:change, alter, modify|" sense14="|sense14:hypev0:work|sense14:hypev1:be|" sense15="|sense15:hypev0:influence, act upon, work|sense15:hypev1:affect, impact, bear upon, bear on, touch on, touch|sense15:hypev2:change, alter, modify|" sense16="|sense16:hypev0:work|sense16:hypev1:operate, run|sense16:hypev2:direct|sense16:hypev3:manage, deal, care, handle|sense16:hypev4:control, command|" sense17="|sense17:hypev0:work|sense17:hypev1:manage, deal, care, handle|sense17:hypev2:control, command|" sense18="|sense18:hypev0:work|sense18:hypev1:stimulate, excite, stir|sense18:hypev2:sensitize, sensitise|" sense19="|sense19:hypev0:work|sense19:hypev1:capture, enamour, trance, catch, becharm, enamor, captivate, beguile, charm, fascinate, bewitch, entrance, enchant|sense19:hypev2:attract, appeal|" sense20="|sense20:hypev0:shape, form, work, mold, mould, forge|sense20:hypev1:create from raw material, create from raw stuff|sense20:hypev2:make, create|" sense21="|sense10:hypev0:work|sense10:hypev1:move, displace|" sense22="|sense22:hypev0:knead, work|sense22:hypev1:manipulate|sense22:hypev2:handle, palm|sense22:hypev3:touch|" sense23="|sense23:hypev0:exploit, work|sense23:hypev1:use, utilize, utilise, apply, employ|" sense24="|sense24:hypev0:solve, work out, figure out, puzzle out, lick, work|sense24:hypev1:understand|" sense25="|sense25:hypev0:ferment, work|sense25:hypev1:convert|sense25:hypev2:change, alter, modify|" sense26="|sense26:hypev0:sour, turn, ferment, work|sense26:hypev1:change state, turn|sense26:hypev2:change|" sense27="|sense27:hypev0:work|sense27:hypev1:become, go, get|sense27:hypev2:change state, turn|sense27:hypev3:change|">
+worked	VBD	work
+</hypev>
+with	IN	with
+his	PP$	his
+father	NN	father
+inside	IN	inside
+the	DT	the
+yellow	JJ	yellow
+mountain	NN	mountain
+.	SENT	.
+

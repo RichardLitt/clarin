@@ -1,0 +1,77 @@
+## CQP Tagged from the Wordnet Parser on 2012-06-21 15:58:28.588173.
+Curdie	NP	<unknown>
+was	VBD	be
+the	DT	the
+<hypen="son, boy|male offspring, man-child|child, kid|offspring, progeny, issue|relative, relation|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity|male, male person|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+<hypen="Son, Word, Logos|Godhead, Lord, Creator, Maker, Divine, God Almighty, Almighty, Jehovah|belief|content, cognitive content, mental object|cognition, knowledge, noesis|psychological feature|abstraction, abstract entity|entity">
+son	NN	son
+</hypen>
+of	IN	of
+<hypen="Peter, Simon Peter, Saint Peter, St. Peter, Saint Peter the Apostle, St. Peter the Apostle|Christian|religious person|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity|disciple, adherent|follower|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity|deity, divinity, god, immortal|spiritual being, supernatural being|belief|content, cognitive content, mental object|cognition, knowledge, noesis|psychological feature|abstraction, abstract entity|entity">
+<hypen="cock, prick, dick, shaft, pecker, peter, tool, putz|penis, phallus, member|erectile organ|organ|body part|part, piece|thing|physical entity|entity">
+Peter	NP	Peter
+</hypen>
+the	DT	the
+<hypen="miner, mineworker|laborer, manual laborer, labourer, jack|workman, workingman, working man, working person|employee|worker|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+miner	NN	miner
+</hypen>
+.	SENT	.
+He	PP	he
+lived	VBD	live
+with	IN	with
+his	PP$	his
+<hypen="father, male parent, begetter|parent|genitor|progenitor, primogenitor|ancestor, ascendant, ascendent, antecedent, root|relative, relation|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+<hypen="forefather, father, sire|ancestor, ascendant, ascendent, antecedent, root|relative, relation|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+<hypen="Father, Padre|priest|clergyman, reverend, man of the cloth|spiritual leader|leader|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity|Holy Order, Order|status, position|state|attribute|abstraction, abstract entity|entity|title, title of respect, form of address|appellation, denomination, designation, appellative|name|language unit, linguistic unit|part, portion, component part, component, constituent|relation|abstraction, abstract entity|entity">
+<hypen="Church Father, Father of the Church, Father|theologian, theologist, theologizer, theologiser|scholar, scholarly person, bookman, student|intellectual, intellect|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+<hypen="father|leader|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+<hypen="Father, Father-God, Fatherhood|Godhead, Lord, Creator, Maker, Divine, God Almighty, Almighty, Jehovah|belief|content, cognitive content, mental object|cognition, knowledge, noesis|psychological feature|abstraction, abstract entity|entity">
+<hypen="founder, beginner, founding father, father|originator, conceiver, mastermind|creator|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+<hypen="don, father|head, chief, top dog|leader|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+father	NN	father
+</hypen>
+and	CC	and
+<hypen="mother, female parent|parent|genitor|progenitor, primogenitor|ancestor, ascendant, ascendent, antecedent, root|relative, relation|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+<hypen="mother|yeast, barm|leaven, leavening|substance|matter|physical entity|entity">
+<hypen="mother|old woman|oldster, old person, senior citizen, golden ager|adult, grownup|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity|woman, adult female|female, female person|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity|adult, grownup|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+<hypen="mother|abbess, mother superior, prioress|superior|religious|religious person|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+<hypen="mother|inspiration|idea, thought|content, cognitive content, mental object|cognition, knowledge, noesis|psychological feature|abstraction, abstract entity|entity">
+mother	NN	mother
+</hypen>
+in	IN	in
+a	DT	a
+<hypen="bungalow, cottage|house|dwelling, home, domicile, abode, habitation, dwelling house|housing, lodging, living accommodations|structure, construction|artifact, artefact|whole, unit|object, physical object|physical entity|entity|building, edifice|structure, construction|artifact, artefact|whole, unit|object, physical object|physical entity|entity">
+cottage	NN	cottage
+</hypen>
+built	VBN	build
+on	IN	on
+a	DT	a
+<hypen="mountain, mount|natural elevation, elevation|geological formation, formation|object, physical object|physical entity|entity">
+<hypen="batch, deal, flock, good deal, great deal, hatful, heap, lot, mass, mess, mickle, mint, mountain, muckle, passel, peck, pile, plenty, pot, quite a little, raft, sight, slew, spate, stack, tidy sum, wad|large indefinite quantity, large indefinite amount|indefinite quantity|measure, quantity, amount|abstraction, abstract entity|entity">
+mountain	NN	mountain
+</hypen>
+,	,	,
+and	CC	and
+he	PP	he
+worked	VBD	work
+with	IN	with
+his	PP$	his
+<hypen="father, male parent, begetter|parent|genitor|progenitor, primogenitor|ancestor, ascendant, ascendent, antecedent, root|relative, relation|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+<hypen="forefather, father, sire|ancestor, ascendant, ascendent, antecedent, root|relative, relation|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+<hypen="Father, Padre|priest|clergyman, reverend, man of the cloth|spiritual leader|leader|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity|Holy Order, Order|status, position|state|attribute|abstraction, abstract entity|entity|title, title of respect, form of address|appellation, denomination, designation, appellative|name|language unit, linguistic unit|part, portion, component part, component, constituent|relation|abstraction, abstract entity|entity">
+<hypen="Church Father, Father of the Church, Father|theologian, theologist, theologizer, theologiser|scholar, scholarly person, bookman, student|intellectual, intellect|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+<hypen="father|leader|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+<hypen="Father, Father-God, Fatherhood|Godhead, Lord, Creator, Maker, Divine, God Almighty, Almighty, Jehovah|belief|content, cognitive content, mental object|cognition, knowledge, noesis|psychological feature|abstraction, abstract entity|entity">
+<hypen="founder, beginner, founding father, father|originator, conceiver, mastermind|creator|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+<hypen="don, father|head, chief, top dog|leader|person, individual, someone, somebody, mortal, soul|organism, being|living thing, animate thing|whole, unit|object, physical object|physical entity|entity|causal agent, cause, causal agency|physical entity|entity">
+father	NN	father
+</hypen>
+inside	IN	inside
+the	DT	the
+yellow	JJ	yellow
+<hypen="mountain, mount|natural elevation, elevation|geological formation, formation|object, physical object|physical entity|entity">
+<hypen="batch, deal, flock, good deal, great deal, hatful, heap, lot, mass, mess, mickle, mint, mountain, muckle, passel, peck, pile, plenty, pot, quite a little, raft, sight, slew, spate, stack, tidy sum, wad|large indefinite quantity, large indefinite amount|indefinite quantity|measure, quantity, amount|abstraction, abstract entity|entity">
+mountain	NN	mountain
+</hypen>
+.	SENT	.
+
