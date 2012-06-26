@@ -7,3 +7,8 @@ research job) with [CLARIN-D](http://clarin-d.de/index.php/de/).
 All code here is currently open source, although this may change in the
 future. 
 
+Projects
+--------
+
+Current projects include:
+  * WordNet CQP and XML Tagger
