@@ -66,4 +66,4 @@ To do:
 # License
 -----------
 
-This is kind of a grey area at the moment.
+This program is licensed under the [GPL-3 license](http://www.gnu.org/licenses/gpl-3.0.txt). 
