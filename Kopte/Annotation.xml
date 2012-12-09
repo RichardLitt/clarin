@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<document>
+  <header>
+    <textfile>AT001/AT001UE002.txt</textfile>
+    <lang>german</lang>
+    <complete>100%</complete>
+  </header>
+    <segments>
+      <segment id='1' start='47' end='62' features='annotation;posev;p-lexik;pl-w' state='active'/>
+      <segment id='2' start='48' end='52' features='annotation;gewichtung;+;+3' state='active'/>
+      <segment id='4' start='202' end='216' features='annotation;posev;p-lexik;pl-w' state='active'/>
+      <segment id='3' start='203' end='207' features='annotation;gewichtung;+;+3' state='active'/>
+      <segment id='5' start='318' end='332' features='annotation;negev;n-lexik;nl-g' state='active'/>
+      <segment id='6' start='323' end='327' features='annotation;gewichtung;-;-3' state='active'/>
+      <segment id='8' start='491' end='514' features='annotation;posev;p-lexik;pl-w' state='active'/>
+      <segment id='7' start='493' end='497' features='annotation;gewichtung;+;+2' state='active'/>
+      <segment id='9' start='516' end='537' features='annotation;negev;n-lexik;nl-g' state='active' comment='Le'/>
+      <segment id='11' start='516' end='523' features='annotation;gewichtung;-;-2' state='active'/>
+      <segment id='10' start='517' end='523' features='annotation;negev;n-lexik;nl-e' state='ignored'/>
+      <segment id='12' start='591' end='609' features='annotation;negev;n-lexik;nl-g' state='active' comment='Kb'/>
+      <segment id='13' start='591' end='595' features='annotation;negev;n-kohäs;nk-b' state='ignored'/>
+      <segment id='14' start='596' end='602' features='annotation;gewichtung;-;-3' state='active'/>
+      <segment id='15' start='626' end='627' features='annotation;negev;n-form;nf-i' state='active'/>
+      <segment id='16' start='626' end='627' features='annotation;gewichtung;-;-1' state='active'/>
+      <segment id='17' start='663' end='683' features='annotation;negev;n-lexik;nl-g' state='ignored' comment='Kb'/>
+      <segment id='18' start='663' end='672' features='annotation;negev;n-kohäs;nk-b' state='ignored'/>
+      <segment id='19' start='869' end='875' features='annotation;negev;n-gramm;ng-k' state='active'/>
+      <segment id='20' start='870' end='873' features='annotation;gewichtung;-;-1' state='active'/>
+      <segment id='21' start='1031' end='1041' features='annotation;negev;n-lexik;nl-w' state='active'/>
+      <segment id='22' start='1031' end='1035' features='annotation;gewichtung;-;-3' state='active'/>
+      <segment id='23' start='1279' end='1288' features='annotation;negev;n-trans;nt-e' state='active' comment='Gk'/>
+      <segment id='24' start='1279' end='1287' features='annotation;negev;n-gramm;ng-k' state='ignored'/>
+      <segment id='25' start='1279' end='1287' features='annotation;gewichtung;-;-3' state='active'/>
+      <segment id='26' start='1359' end='1397' features='annotation;posev;p-lexik;pl-w' state='active' comment='Gs'/>
+      <segment id='27' start='1359' end='1374' features='annotation;posev;p-gramm;pg-s' state='ignored'/>
+      <segment id='28' start='1375' end='1392' features='annotation;gewichtung;+;+2' state='active'/>
+      <segment id='29' start='1658' end='1696' features='annotation;posev;p-register;pr-f' state='active'/>
+      <segment id='30' start='1658' end='1666' features='annotation;gewichtung;+;+2' state='active'/>
+      <segment id='31' start='1842' end='1853' features='annotation;negev;n-lexik;nl-w' state='active' comment='Li'/>
+      <segment id='32' start='1842' end='1847' features='annotation;negev;n-lexik;nl-i' state='ignored'/>
+      <segment id='33' start='1847' end='1853' features='annotation;gewichtung;-;-1' state='active'/>
+      <segment id='34' start='2056' end='2066' features='annotation;negev;n-gramm;ng-w' state='active'/>
+      <segment id='35' start='2056' end='2060' features='annotation;gewichtung;-;-1' state='active'/>
+      <segment id='36' start='2143' end='2158' features='annotation;negev;n-lexik;nl-g' state='active' comment='Kk'/>
+      <segment id='37' start='2143' end='2148' features='annotation;negev;n-kohäs;nk-k' state='ignored'/>
+      <segment id='38' start='2149' end='2155' features='annotation;gewichtung;-;-3' state='active'/>
+    </segments>
+</document>

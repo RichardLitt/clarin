@@ -1,0 +1,110 @@
+here's the second installment of the code explanation, once you've grasp the idea of that big regex loop, the rest of the code is just a lot of repeated procedures in checking different regex.
+
+hope you pick up perl because someone like you should be fascinated by the perl ideology of being scripty =)
+
+
+Alright to explain the loop part is pretty challenging. Because it has some very perly concepts. 
+  
+  $uamf = shift @ARGV;
+  $uamin = open_infile($uamf);
+  while (<$uamin>) {
+
+1st thing is what is call the readline operator in perl, in scripting what you want is short and quick typing so in n perl, the < > operators are use http://perldoc.perl.org/functions/readline.html. Instead of the normal readline() in python http://docs.python.org/tutorial/inputoutput.html, perl uses < >. the above lines of code is equivalent to this in python:
+
+  uamf = raw_input('please enter the path to the textfile')
+  uamin = open (umaf)
+  for line in umain:
+
+2nd thing to know is what is called the "default variable" (i.e. $_), in this piece of code when you do the "while (<$uamin>)" line, perl will automatically set the default variable as the current line that you are reading from the < > and the while loop. So let's say you have a text file:
+
+  this is the 1st line.
+  this is the 2nd line.
+
+and then you have the code below in perl
+
+  while (<read_text_above>) {
+    print $_; # that means print the current line.
+  }
+
+the output will be:
+
+  this is the 1st line.
+  this is the 2nd line.
+
+So let's say if you want to use this in the script reading $_ is a lot of trouble, so in perl, the code below will work exactly the same as the one in $_, since $_ is ommitable.
+
+  while (<read_text_above>) {
+    print; # without explicitly saying $_, it also print the current line.
+  }
+  
+for more info, check out "Perl variable types > scalar" section from the perldoc, http://perldoc.perl.org/perlintro.html. 
+For now, you can treat it as the $_ inside the loop is the current line read by the < > and the while loop. let's go back to the big regex if clause.
+
+if(/<segment /){
+	
+the above is another one of perl shortcuts, it's equivalent to this in more readable perl:
+
+if ($_ ~= /<segment /) {
+
+meaning it's checking whether the current line matches the "<segment " regex. So i assume that in your input files are are lines that has "<segment this is a segment or something", then the match if clause above will say it matches. I'm assuming if you have ran through some serious regex training in python, if not, i suggest that you read up on python regex or basic unix/perl regex too http://perldoc.perl.org/perlretut.html, it's sort of very helpful in scriptiing. 
+
+Another point to note is when you want to explicitly check something is conditionally equals to something you would use ~= instead of == (like in python). see http://stackoverflow.com/questions/10405868/what-does-mean-in-perl . So in python it might look like this, i like to use the regex module (i.e. import re) in python instead of using crude equivalence:
+
+  import re
+  pattern_tocheck_if_line_has_<segmentandspace_ = r'[<segment\s]'
+
+  for line in umain:
+    re.matches(pattern_tocheck_if_line_has_<segmentandspace_, line) # i'm not very sure whether you should use re.matches or re.search but you're the python guy, so you should decide. hahaa...
+
+So for the next few lines it's trying to do some really crazy checks on the regex:
+
+	/start=\'([0-9]+)\'/;
+	$start = $1;
+	
+	/end=\'([0-9]+)\'/;
+	$end = $1;
+	
+the above code is equivalent to the below in more readable perl:
+
+	if ($_ =~ /start=\'([0-9]+)\'/) {
+    $start = $1; }
+	if ($_ = /end=\'([0-9]+)\'/) {
+    $end = $1; }
+	
+But here comes another perly thing, $1, it has some special meaning in perl. It means this "so let's check whether there are any token that matches the '([0-9]+)\' regex, and then i will instantiate $start with that token that matches that regex". if my regex is not wrong '([0-9]+)\' means any continuous chain of digits, i.e. if it matches a number, make $start the same value as that number. The stackoverflow has a very nice explanation on the special $1 variable http://stackoverflow.com/questions/1036285/what-does-1-mean-in-perl or you can search the official perlvar documentations http://perldoc.perl.org/perlvar.html
+
+	/features=\'([^\']+)\'/;
+	$features = $1;
+
+Now after going through the regex to instantiate $start and $end, we know that the above code can be rewritten into:
+
+	if ($_ =~ /features=\'([^\']+)\'/ ) {
+$features = $1; }
+
+So what the above is saying is if my current line contains the regex pattern "feature=...", i'll instantiate the $feature variable with the token that matches that regex.  I think, and you need to check because my regex knowledge is weak, this regex \'([^\']+)\  means that anything that doesn't contain the "\" character. 
+
+	$features =~ s/annotation;//;
+	$features =~ s/;/|/g;
+
+now this 2 lines are the magic of perl/unix based regex. the 1st line says this "so i've taken the token that matches my "feature=...." regex, so within that token, i want to replace the "annotation" with null character. so for e.g. if this is how the current line look like:
+
+<segment 1231441 feature=this is a text ;annotation det cop det nn 123123>
+
+$start will have the value "1231441"
+$end will have the value "123123"
+$feature will have the value "feature=this is a text; annotation det cop det nn"
+
+then after the $features =~ s/annotation;//; code, 
+$feature will have the value "feature=this is a text; det cop det nn"
+
+then after the $features =~ s/;/|/g; line,
+the ; character will be replaced by |
+$feature will have the value "feature=this is a text| det cop det nn"
+
+Alright, the above description of the regex in the loop should give you a brief idea of what the script is doing, it's reading file performing some clean up using regex and then output into the "cleaned" format. 
+
+There's just one thing that i dont use in perl but your script did, he used some push/pop stack/que functions that i'll need to check up the perldoc again.
+so my next (i.e. also the last installment) will just describe the last 2 lines in the loop.
+
+push(@{$Start{$start}},$features); 
+push(@{$End{$end}},$features); 
